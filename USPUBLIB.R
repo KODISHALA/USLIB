@@ -330,7 +330,20 @@ Input_Yearly$LOANFM  <- as.double(Input_Yearly$LOANFM)
 Input_Yearly$KIDATTEN  <- as.double(Input_Yearly$KIDATTEN)
 Input_Yearly$GPTERMS  <- as.double(Input_Yearly$GPTERMS)
 
+
+# sum of each variable per year
 InData_Agg_Yearly <- aggregate(Input_Yearly, by=list(Year=Input_Data_Cleans$YR_SUB),FUN=sum)
+
+# write details to output spread sheet and cross validate these with the results from the charts generated in the following sections
+write.csv(InData_Agg_Yearly, "InData_Agg_Yearly.csv", row.names=FALSE)
+
+
+
+# sum of each variable per state per yearly
+InData_Agg_State <- aggregate(Input_Yearly, by=list(State=Input_Data_Cleans$STABR, Year=Input_Data_Cleans$YR_SUB),FUN=sum)
+
+# write details to output spread sheet and cross validate these with the results from the charts generated in the following sections
+write.csv(InData_Agg_State, "InData_Agg_State.csv", row.names=FALSE)
 
 ################################
 # Now check the data to see how it is spread over

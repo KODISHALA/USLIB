@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#header {
+    background-color:#8888C5;
+    color:black;
+    text-align:center;
+    padding:5px;
+}
+#nav {
+    line-height:30px;
+    background-color:#D5D3D9;
+    height:500px;
+    width:120px;
+    float:left;
+    padding:5px;	      
+}
+#section {
+    width:500px;
+    float:left;
+    padding:50px;	 	 
+}
+#footer {
+    background-color:black;
+    color:white;
+    clear:both;
+    text-align:center;
+   padding:5px;	 	 
+}
+</style>
+
+<script>
+
+	function showImage(imgName) {
+		document.getElementById("htmlImage").setAttribute("src", imgName+ ".jpg");
+	}
+</script>
+
+</head>
+<body>
+
+<div id="header">
+<h1>United States Public Libraries</h1>
+<h2>Statistical analysis dash board</h2>
+</div>
+
+<div id="nav">
+	<a href="#" onclick="showImage('USPUBLIB02')" />Welcome</a><br>
+	<a href="#" onclick="showImage('Expenses')" />Expenses </a><br>
+	<a href="#" onclick="showImage('Resources')" />Resources </a><br>
+	<a href="#" onclick="showImage('visitation')" />Vistation </a><br>
+	<a href="#" onclick="showImage('Kids Materials')" />Kids Material Circulation</a><br>
+	<a href="#" onclick="showImage('Kids Materials')" />Hours Open </a><br>
+	<a href="#" onclick="showImage('Top10')" />Top 10 Libraries</a><br>
+</div>
+
+<div id="section">
+	<h2> </h2>
+
+	<img id="htmlImage"  align = "middle" height = "400" width = "950" > </img>
+</div>
+
+<div id="footer">
+Copyright © Ganga Prasad Kodishala
+</div>
+
+</body>
+</html>
